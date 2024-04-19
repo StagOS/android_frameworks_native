@@ -916,7 +916,6 @@ void Output::writeCompositionState(const compositionengine::CompositionRefreshAr
 compositionengine::OutputLayer* Output::findLayerRequestingBackgroundComposition() const {
     compositionengine::OutputLayer* layerRequestingBgComposition = nullptr;
 
-    for (auto* layer : getOutputLayersOrderedByZ()) {
     for (size_t i = 0; i < getOutputLayerCount(); i++) {
         compositionengine::OutputLayer* layer = getOutputLayerOrderedByZByIndex(i);
         compositionengine::OutputLayer* nextLayer = getOutputLayerOrderedByZByIndex(i + 1);
